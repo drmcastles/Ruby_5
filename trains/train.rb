@@ -1,6 +1,18 @@
+require_relative 'modules/company_name.rb'
+require_relative 'modules/instance_counter.rb'
+
 class Train
+  include CompanyName
+  include InstanceCounter
+
   attr_reader :number, :carriages, :route
   attr_accessor :speed
+
+  @@trains = {}
+
+  def self.find(number)
+    @@trains[number]
+  end
 
   def initialize(number)
     @speed = 0

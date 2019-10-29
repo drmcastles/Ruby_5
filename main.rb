@@ -9,3 +9,6 @@ require_relative 'carriages/carriage.rb'
 require_relative 'carriages/cargo.rb'
 require 'securerandom'
 
+main = Main.new
+main.execute
+

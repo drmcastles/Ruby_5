@@ -1,3 +1,5 @@
+require_relative 'modules/instance_counter.rb'
+
 class Route
 attr_reader :stations, :start, :finish, :mid_stations
   def initialize(start, finish)
